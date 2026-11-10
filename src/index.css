@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #060E1F;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes shakeError {
+  0%, 100% { transform: translateX(0); }
+  15%, 45%, 75% { transform: translateX(-10px); }
+  30%, 60%, 90% { transform: translateX(10px); }
+}
+
+.animate-shake {
+  animation: shakeError 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-board-poster, #printable-board-poster * {
+    visibility: visible;
+  }
+  #printable-board-poster {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 12mm;
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

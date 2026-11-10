@@ -1,0 +1,6 @@
+{
+  "name": "Class of Champions — PJOK Atletik Kelas 4/B",
+  "description": "Aplikasi game kompetisi akademik antartim interaktif Class of Champions untuk mata pelajaran PJOK materi Atletik Kelas 4/B beserta studio Board Quiz interaktif.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
